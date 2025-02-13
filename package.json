@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "@next/font": "^14.2.15",
+    "jsdom": "^26.0.0",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^9.20.1",
+    "eslint-config-next": "^15.1.7",
+    "eslint-plugin-prettier": "^5.2.3",
+    "prettier": "^3.5.0"
+  }
+}

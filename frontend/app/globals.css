@@ -1,0 +1,13 @@
+/* body {
+  font-family: 'Noto Sans CJK', sans-serif;
+} */
+
+:root {
+  --noto-sans-jp: "Noto Sans JP", sans-serif;
+  --noto-sans-sc: "Noto Sans SC", sans-serif;
+}
+
+body {
+  font-family: var(--noto-sans-jp), var(--noto-sans-sc), sans-serif;
+  font-weight: 400; /* 或者 700，根据需要选择 */
+}
