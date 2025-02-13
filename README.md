@@ -30,23 +30,23 @@
 
 ## 目录结构
 japanese-grammar-app/
-├── app/
-│   ├── layout.js     # 根布局文件，用于设置全局样式和字体
-│   └── globals.css   # 全局 CSS 样式
-├── pages/
-│   ├── api/
-│   │   ├── gemini.js   # 调用 Gemini API 的后端接口
-│   │   └── notion.js   # 调用 Notion API 的后端接口
-│   ├── index.js      # 首页，包含用户界面和交互逻辑 (frontend/pages/index.js:5-57)
-│   └── document.js   # 自定义 Document 文件 (如果存在)
-├── public/
-│   └── ...           # 静态资源文件
-├── .env.local        # 环境变量配置文件
-├── .gitignore        # Git 忽略文件
-├── next.config.js    # Next.js 配置文件 (frontend/next.config.ts:1-7)
-├── package.json      # 项目依赖和脚本配置文件 (frontend/package.json:1-40)
-├── README.md         # 项目说明文档
-└── tailwind.config.ts # Tailwind CSS 配置文件 (如果使用)
+*   app/
+    *   layout.js     # 根布局文件，用于设置全局样式和字体
+    *   globals.css   # 全局 CSS 样式
+*   pages/
+    *   api/
+        *   gemini.js   # 调用 Gemini API 的后端接口
+        *   notion.js   # 调用 Notion API 的后端接口
+    *   index.js      # 首页，包含用户界面和交互逻辑 (frontend/pages/index.js:5-57)
+    *   document.js   # 自定义 Document 文件 (如果存在)
+*   public/
+    *   ...           # 静态资源文件
+*   .env.local        # 环境变量配置文件
+*   .gitignore        # Git 忽略文件
+*   next.config.js    # Next.js 配置文件 (frontend/next.config.ts:1-7)
+*   package.json      # 项目依赖和脚本配置文件 (frontend/package.json:1-40)
+*   README.md         # 项目说明文档
+*   tailwind.config.ts # Tailwind CSS 配置文件 (如果使用)
 
 ## 环境变量
 
