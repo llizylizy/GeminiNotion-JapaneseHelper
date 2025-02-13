@@ -8,6 +8,7 @@ export default function Home() {
   const [notionSaved, setNotionSaved] = useState(false);
 
   const handleSearch = async () => {
+    setNotionSaved(false);
     try {
       const response = await fetch("/api/gemini", {
         method: "POST",

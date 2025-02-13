@@ -1,7 +1,10 @@
 {
   "dependencies": {
     "@next/font": "^14.2.15",
+    "@notionhq/client": "^2.2.15",
+    "@tryfabric/martian": "^1.2.4",
     "jsdom": "^26.0.0",
+    "notion-markdown": "^0.0.1",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1"
   },
