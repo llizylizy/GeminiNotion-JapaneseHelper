@@ -71,7 +71,7 @@
 2.  **安装依赖：**
 
     ```bash
-    cd japanese-grammar-app/frontend
+    cd GeminiNotion-JapaneseHelper/frontend
     npm install
     ```
 
