@@ -11,3 +11,11 @@ body {
   font-family: var(--noto-sans-jp), var(--noto-sans-sc), sans-serif;
   font-weight: 400; /* 或者 700，根据需要选择 */
 }
+
+/*  Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212; /*  Dark background color */
+    color: #fff; /*  Light text color */
+  }
+}

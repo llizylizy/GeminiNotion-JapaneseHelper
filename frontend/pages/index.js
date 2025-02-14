@@ -1,14 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
-import { Button, TextField, Container, Box, Typography } from "@mui/material";
+import { Button, TextField, Container, Box, Typography, CircularProgress } from "@mui/material";
+import { useTheme } from '@mui/material/styles';
 
 export default function Home() {
   const [inputText, setInputText] = useState("");
   const [apiResponse, setApiResponse] = useState(null);
   const [notionSaved, setNotionSaved] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [saving, setSaving] = useState(false);
+  const theme = useTheme();
 
   const handleSearch = async () => {
     setNotionSaved(false);
+    setLoading(true);
     try {
       const response = await fetch("/api/gemini", {
         method: "POST",
@@ -30,10 +35,13 @@ export default function Home() {
     } catch (error) {
       console.error("Error fetching data:", error);
       // Handle error appropriately (e.g., display an error message)
+    } finally {
+      setLoading(false);
     }
   };
 
   const handleSaveToNotion = async () => {
+    setSaving(true);
     try {
       const response = await fetch("/api/notion", {
         method: "POST",
@@ -54,6 +62,8 @@ export default function Home() {
     } catch (error) {
       console.error("Error saving to Notion:", error);
       // Handle error appropriately (e.g., display an error message)
+    } finally {
+      setSaving(false);
     }
   };
 
@@ -69,8 +79,8 @@ export default function Home() {
           onChange={(e) => setInputText(e.target.value)}
           sx={{ mb: 2 }}
         />
-        <Button variant="contained" color="primary" onClick={handleSearch}>
-          搜索
+        <Button variant="contained" color="primary" onClick={handleSearch} disabled={loading}>
+          {loading ? <CircularProgress size={24} /> : "搜索"}
         </Button>
 
         {apiResponse && (
@@ -82,9 +92,9 @@ export default function Home() {
                 variant="contained"
                 color="secondary"
                 onClick={handleSaveToNotion}
-                disabled={notionSaved}
+                disabled={notionSaved || saving}
               >
-                保存到 Notion
+                {saving ? <CircularProgress size={24} /> : "保存到 Notion"}
               </Button>
               {notionSaved && (
                 <Typography
