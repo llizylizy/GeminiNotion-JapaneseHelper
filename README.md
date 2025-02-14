@@ -2,7 +2,8 @@
 
 ## 项目简介
 
-本项目是一个基于 Next.js 的 Web 应用程序，旨在帮助用户分析日语句子的语法。用户可以输入日语句子，然后通过 Gemini API 获取句子的翻译、场景推测和语法分析。最后，可以将分析结果保存到 Notion 数据库中。
+本项目是AI完成所有代码任务（因为本人一点不会）
+一个基于 Next.js 的 Web 应用程序，旨在帮助用户分析日语句子的语法。用户可以输入日语句子，然后通过 Gemini API 获取句子的翻译、场景推测和语法分析。最后，可以将分析结果保存到 Notion 数据库中。
 
 ## 技术栈
 
@@ -29,7 +30,6 @@
 *   **字体支持:** 使用 Noto Sans JP 和 Noto Sans SC 字体，提供良好的日语和中文显示效果 (frontend/app/layout.js:1-23, frontend/app/globals.css:5-13)。
 
 ## 目录结构
-japanese-grammar-app/
 *   app/
     *   layout.js     # 根布局文件，用于设置全局样式和字体
     *   globals.css   # 全局 CSS 样式
@@ -64,7 +64,7 @@ japanese-grammar-app/
 1.  **克隆代码仓库：**
 
     ```bash
-    git clone <repository_url>
+    git clone https://github.com/llizylizy/GeminiNotion-JapaneseHelper.git
     ```
 
 2.  **安装依赖：**
