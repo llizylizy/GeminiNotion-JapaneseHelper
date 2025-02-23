@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev --turbopack --port 3001",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -12,6 +12,7 @@
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
+    "@google/generative-ai": "^0.21.0",
     "@mui/material": "^6.4.4",
     "@notionhq/client": "^2.2.15",
     "@tryfabric/martian": "^1.2.0",

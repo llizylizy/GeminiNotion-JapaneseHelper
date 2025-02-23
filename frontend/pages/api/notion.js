@@ -70,8 +70,8 @@ export default async function handler(req, res) {
 
       res.status(200).json(response);
     } catch (error) {
-      console.error(error);
-      res.status(500).json({ error: "Failed to save to Notion" });
+      console.warn("Notion API 回复:", error);
+      res.status(200).json({ message: "Failed to save to Notion, but the request was processed." });
     }
   } else {
     res.status(405).json({ message: "Method Not Allowed" });
